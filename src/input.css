@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer components{
+  body{
+    @apply font-secondary text-[22px] text-secondary;
+  }
+  .a{
+    @apply text-[22px] hover:text-accent-hover transition-all duration-300
+  }
+  .h1,.h2,.h3,.h4,.h5,.h6{
+    @apply text-primary-default font-primary;
+  }
+  .h1{
+    @apply text-[64px] lg:text-[84px] leading-none;
+  }
+  .h2{
+    @apply text-[50px]  leading-tight;
+  }
+  .h3{
+      @apply text-[25px]
+  }
+
+  .btn{
+      @apply h-[75px] px-[30px] transition-all duration-300 text-white rounded-[18px] flex items-center gap-2
+  }
+  .btn-primary{
+    @apply bg-primary-default hover:bg-primary-hover 
+}
+
+.btn-accent{
+    @apply bg-accent-default hover:bg-accent-hover
+}
+
+}
+
+
+
+@theme {
+    --font-display: "Satoshi", "sans-serif";
+    --breakpoint-3xl: 120rem;
+    --color-avocado-100: oklch(0.99 0 0);
+    --color-avocado-200: oklch(0.98 0.04 113.22);
+    --color-avocado-300: oklch(0.94 0.11 115.03);
+    --color-avocado-400: oklch(0.92 0.19 114.08);
+    --color-avocado-500: oklch(0.84 0.18 117.33);
+    --color-avocado-600: oklch(0.53 0.12 118.34);
+    --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+    --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+    /* ... */
+
+    /* ... -------My custom-------- ... */
+    /* Font */
+    --font-primary: "DM Serif Display";
+    --font-secondary:'Jost';
+
+    /* Colors */
+    --color-primary-default: #292f36;
+    --color-primary-hover: #343e4a;
+
+    --color-secondary: #4d5053;
+
+    --color-accent-default: #cda274;
+    --color-accent-secondary: #f4f0ec;
+    --color-accent-hover: #688c5d;
+
+  }
+
+  
