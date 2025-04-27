@@ -31,6 +31,10 @@
     @apply bg-accent-default hover:bg-accent-hover
 }
 
+.bg_hero{
+  background-image: --hero-image;
+}
+
 }
 
 
@@ -64,5 +68,6 @@
     --color-accent-hover: #688c5d;
 
   }
+  
 
   

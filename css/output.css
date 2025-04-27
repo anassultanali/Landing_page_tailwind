@@ -176,8 +176,32 @@
   .fixed {
     position: fixed;
   }
+  .relative {
+    position: relative;
+  }
   .static {
     position: static;
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .right-6 {
+    right: calc(var(--spacing) * 6);
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-20 {
+    z-index: 20;
   }
   .container {
     width: 100%;
@@ -203,6 +227,12 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .flex {
+    display: flex;
+  }
   .grid {
     display: grid;
   }
@@ -211,6 +241,39 @@
   }
   .table {
     display: table;
+  }
+  .h-\[0px\] {
+    height: 0px;
+  }
+  .h-\[30px\] {
+    height: 30px;
+  }
+  .h-\[300px\] {
+    height: 300px;
+  }
+  .h-\[500px\] {
+    height: 500px;
+  }
+  .h-\[640px\] {
+    height: 640px;
+  }
+  .h-\[3000px\] {
+    height: 3000px;
+  }
+  .h-\[5000px\] {
+    height: 5000px;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .w-\[567\] {
+    width: 567;
+  }
+  .w-\[567px\] {
+    width: 567px;
+  }
+  .max-w-\[1920px\] {
+    max-width: 1920px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -221,12 +284,48 @@
   .resize {
     resize: both;
   }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-\[url\(\'\.\.\/assets\/hero\/bg\.jpg\'\)\] {
+    background-image: url('../assets/hero/bg.jpg');
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-fixed {
+    background-attachment: fixed;
+  }
+  .bg-center {
+    background-position: center;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-accent-default {
+    color: var(--color-accent-default);
   }
   .underline {
     text-decoration-line: underline;
@@ -242,6 +341,61 @@
   }
   .backface-hidden {
     backface-visibility: hidden;
+  }
+  .lg\:items-start {
+    @media (width >= 64rem) {
+      align-items: flex-start;
+    }
+  }
+  .xl\:mx-6 {
+    @media (width >= 80rem) {
+      margin-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .xl\:h-\[840px\] {
+    @media (width >= 80rem) {
+      height: 840px;
+    }
+  }
+  .xl\:justify-start {
+    @media (width >= 80rem) {
+      justify-content: flex-start;
+    }
+  }
+  .xl\:rounded-\[290px\] {
+    @media (width >= 80rem) {
+      border-radius: 290px;
+    }
+  }
+  .xl\:rounded-bl-\[290px\] {
+    @media (width >= 80rem) {
+      border-bottom-left-radius: 290px;
+    }
+  }
+  .xl\:bg-fixed {
+    @media (width >= 80rem) {
+      background-attachment: fixed;
+    }
+  }
+  .xl\:bg-center {
+    @media (width >= 80rem) {
+      background-position: center;
+    }
+  }
+  .xl\:bg-repeat-x {
+    @media (width >= 80rem) {
+      background-repeat: repeat-x;
+    }
+  }
+  .xl\:bg-repeat-y {
+    @media (width >= 80rem) {
+      background-repeat: repeat-y;
+    }
+  }
+  .xl\:text-left {
+    @media (width >= 80rem) {
+      text-align: left;
+    }
   }
 }
 @layer components {
@@ -312,6 +466,9 @@
         background-color: var(--color-accent-hover);
       }
     }
+  }
+  .bg_hero {
+    background-image: --hero-image;
   }
 }
 @property --tw-rotate-x {
