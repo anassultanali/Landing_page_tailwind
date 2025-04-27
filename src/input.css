@@ -4,8 +4,8 @@
   body{
     @apply font-secondary text-[22px] text-secondary;
   }
-  .a{
-    @apply text-[22px] hover:text-accent-hover transition-all duration-300
+  a{
+    @apply text-[22px] hover:text-accent-default transition-all duration-300
   }
   .h1,.h2,.h3,.h4,.h5,.h6{
     @apply text-primary-default font-primary;
@@ -30,9 +30,11 @@
 .btn-accent{
     @apply bg-accent-default hover:bg-accent-hover
 }
-
-.bg_hero{
-  background-image: --hero-image;
+.nav-is-close{
+  @apply h-0 p-0
+}
+.nav-is-open {
+    @apply h-[350px] p-6 ;
 }
 
 }
