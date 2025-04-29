@@ -7,11 +7,13 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-pink-100: oklch(94.8% 0.028 342.258);
     --color-pink-200: oklch(89.9% 0.061 343.231);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-md: 28rem;
+    --container-xl: 36rem;
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-medium: 500;
@@ -214,6 +216,12 @@
   .z-30 {
     z-index: 30;
   }
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 2;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -240,6 +248,9 @@
   }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-\[8\] {
+    margin-top: 8;
   }
   .mt-\[80px\] {
     margin-top: 80px;
@@ -283,11 +294,23 @@
   .w-full {
     width: 100%;
   }
+  .max-w-\[4\] {
+    max-width: 4;
+  }
+  .max-w-\[453px\] {
+    max-width: 453px;
+  }
   .max-w-\[1920px\] {
     max-width: 1920px;
   }
   .max-w-md {
     max-width: var(--container-md);
+  }
+  .max-w-xl {
+    max-width: var(--container-xl);
+  }
+  .flex-1 {
+    flex: 1;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -310,6 +333,9 @@
   .items-center {
     align-items: center;
   }
+  .justify-baseline {
+    justify-content: baseline;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -321,6 +347,9 @@
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
   }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
@@ -340,6 +369,9 @@
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
+  }
+  .bg-pink-100 {
+    background-color: var(--color-pink-100);
   }
   .bg-pink-200 {
     background-color: var(--color-pink-200);
@@ -451,9 +483,24 @@
       padding: calc(var(--spacing) * 0);
     }
   }
+  .xl\:order-none {
+    @media (width >= 80rem) {
+      order: 0;
+    }
+  }
+  .xl\:mx-0 {
+    @media (width >= 80rem) {
+      margin-inline: calc(var(--spacing) * 0);
+    }
+  }
   .xl\:mx-6 {
     @media (width >= 80rem) {
       margin-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .xl\:mt-\[200\[x\]\] {
+    @media (width >= 80rem) {
+      margin-top: 200[x];
     }
   }
   .xl\:mt-\[200\] {
@@ -476,14 +523,39 @@
       height: 840px;
     }
   }
+  .xl\:max-w-\[410px\] {
+    @media (width >= 80rem) {
+      max-width: 410px;
+    }
+  }
+  .xl\:max-w-none {
+    @media (width >= 80rem) {
+      max-width: none;
+    }
+  }
   .xl\:grid-cols-3 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .xl\:flex-row {
+    @media (width >= 80rem) {
+      flex-direction: row;
+    }
+  }
+  .xl\:items-start {
+    @media (width >= 80rem) {
+      align-items: flex-start;
+    }
+  }
   .xl\:justify-start {
     @media (width >= 80rem) {
       justify-content: flex-start;
+    }
+  }
+  .xl\:gap-\[74px\] {
+    @media (width >= 80rem) {
+      gap: 74px;
     }
   }
   .xl\:rounded-bl-\[290px\] {
@@ -499,6 +571,11 @@
   .xl\:bg-repeat-y {
     @media (width >= 80rem) {
       background-repeat: repeat-y;
+    }
+  }
+  .xl\:px-0 {
+    @media (width >= 80rem) {
+      padding-inline: calc(var(--spacing) * 0);
     }
   }
   .xl\:text-left {
