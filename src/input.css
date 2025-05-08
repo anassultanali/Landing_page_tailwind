@@ -28,7 +28,7 @@
 }
 
 .btn-accent{
-    @apply bg-accent-default hover:bg-accent-hover
+    @apply bg-accent-default hover:bg-accent-default/80
 }
 .nav-is-close{
   @apply h-0 p-0
